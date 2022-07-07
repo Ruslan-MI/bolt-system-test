@@ -3,14 +3,12 @@ const OperationType = {
   SELL: 'SELL',
 };
 
-const getOperationResult = (type, price, quantity) => {
+const getOperationSigh = (type) => {
   switch (type) {
     case OperationType.BUY:
-      return -price * quantity;
-    case OperationType.SELL:
-      return price * quantity;
+      return -1;
     default:
-      return 0;
+      return 1;
   }
 };
 
@@ -24,7 +22,7 @@ const main = (operations) => {
     price,
     qnt,
   }) => {
-    const operationResult = getOperationResult(type, price, qnt);
+    const operationResult = getOperationSigh(type) * price * qnt;
 
     absProfit += operationResult;
 
