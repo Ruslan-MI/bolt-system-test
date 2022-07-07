@@ -4,6 +4,8 @@
     "test": "jest"
   },
   "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-htmlacademy": "^6.0.0",
     "jest": "^28.1.1"
   }
 }
